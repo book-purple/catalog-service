@@ -13,7 +13,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AbstractServiceModel {
+public abstract class AbstractServiceModel {
 
     @Id
     private String id;
