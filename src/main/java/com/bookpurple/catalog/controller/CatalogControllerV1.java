@@ -1,6 +1,7 @@
 package com.bookpurple.catalog.controller;
 
 import com.bookpurple.catalog.bo.EventBo;
+import com.bookpurple.catalog.bo.ServiceBo;
 import com.bookpurple.catalog.constant.Constants;
 import com.bookpurple.catalog.dto.EventDto;
 import com.bookpurple.catalog.dto.LandingRequestDto;
@@ -102,15 +103,15 @@ public class CatalogControllerV1 {
 
     /**
      * API to add new service.
-     * @param eventDto eventDto
+     * @param serviceDto serviceDto
      * @return success as string
      */
     @PostMapping(value = Constants.UriConstants.ADD_SERVICE,
             consumes = APPLICATION_JSON_VALUE,
             produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> addService(@RequestBody EventDto eventDto) {
-        EventBo eventBo = catalogMapper.convertEventDtoToBo(eventDto);
-        eventService.createEvent(eventBo);
+    public ResponseEntity<String> addService(@RequestBody ServiceDto serviceDto) {
+        ServiceBo serviceBo = catalogMapper.convertServiceDtoToBo(serviceDto);
+        servicesService.createService(serviceBo);
         return new ResponseEntity<>("success", HttpStatus.OK);
     }
 

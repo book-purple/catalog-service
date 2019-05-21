@@ -7,12 +7,15 @@ import com.bookpurple.catalog.repo.master.EventMasterRepo;
 import com.bookpurple.catalog.repo.slave.EventSlaveRepo;
 import com.bookpurple.catalog.service.IEventService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /*
  * Created by Gaurav Sharma on 21 May 2019
  */
+@Service
 public class EventServiceImpl implements IEventService {
 
     @Autowired
@@ -26,7 +29,12 @@ public class EventServiceImpl implements IEventService {
 
     @Override
     public EventBo createEvent(EventBo eventBo) {
-        return null;
+        eventBo.setIsLocationSpecific((byte) 1);
+        eventBo.setIsActive((byte) 1);
+        eventBo.setCreatedAt(new Date());
+        return catalogMapper.convertEventEntityToBo(
+                masterRepo.save(
+                        catalogMapper.convertEventBoToEntity(eventBo)));
     }
 
     @Override
