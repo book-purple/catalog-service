@@ -1,6 +1,7 @@
 package com.bookpurple.catalog.service.impl;
 
 import com.bookpurple.catalog.bo.EventBo;
+import com.bookpurple.catalog.entity.EventEntity;
 import com.bookpurple.catalog.mapper.CatalogMapper;
 import com.bookpurple.catalog.repo.master.EventMasterRepo;
 import com.bookpurple.catalog.repo.slave.EventSlaveRepo;
@@ -35,7 +36,7 @@ public class EventServiceImpl implements IEventService {
 
     @Override
     public List<EventBo> findAllEvent() {
-        return null;
+        return catalogMapper.convertEventEntityListToBoList(slaveRepo.findAll());
     }
 
     @Override
@@ -46,5 +47,13 @@ public class EventServiceImpl implements IEventService {
     @Override
     public EventBo findEventById(String id) {
         return null;
+    }
+
+    @Override
+    public void addDummyEvents(List<EventBo> eventBos) {
+        List<EventEntity> eventEntities = catalogMapper.convertEventBoListToEntityList(eventBos);
+        for(EventEntity eventEntity: eventEntities) {
+            masterRepo.save(eventEntity);
+        }
     }
 }

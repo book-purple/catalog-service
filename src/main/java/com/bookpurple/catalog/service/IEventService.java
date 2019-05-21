@@ -18,4 +18,6 @@ public interface IEventService {
     EventBo findEventByName(String name);
 
     EventBo findEventById(String id);
+
+    void addDummyEvents(List<EventBo> eventBos);
 }

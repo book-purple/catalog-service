@@ -12,5 +12,15 @@ public class Constants {
 
     public static class UriConstants {
         public static final String LANDING_API = "/landing";
+
+        /*Event related URL*/
+        public static final String GET_ALL_EVENT = "/event/all";
+        public static final String ADD_DUMMY_EVENT = "/dummy/event/add";
+        public static final String ADD_EVENT = "/event/add";
+
+        /*Service related URL*/
+        public static final String GET_ALL_SERVICES = "/service/all";
+        public static final String ADD_DUMMY_SERVICES= "/dummy/service/add";
+        public static final String ADD_SERVICE = "/service/add";
     }
 }

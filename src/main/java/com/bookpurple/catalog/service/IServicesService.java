@@ -10,13 +10,15 @@ import java.util.List;
  */
 public interface IServicesService {
 
-    ServiceBo createEvent(ServiceBo serviceBo);
+    ServiceBo createService(ServiceBo serviceBo);
 
-    ServiceBo updateEvent(ServiceBo serviceBo);
+    ServiceBo updateService(ServiceBo serviceBo);
 
-    List<ServiceBo> findAllEvent();
+    List<ServiceBo> findAllServices();
 
-    ServiceBo findEventByName(String name);
+    ServiceBo findServiceByName(String name);
 
-    ServiceBo findEventById(String id);
+    ServiceBo findServiceById(String id);
+
+    void addDummyServices(List<ServiceBo> serviceBos);
 }

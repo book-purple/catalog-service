@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
+import java.util.Date;
+
 /*
  * Created by Gaurav Sharma on 21 May 2019
  */
@@ -20,5 +22,5 @@ public class AbstractServiceModel {
     private String icon;
     private byte isLocationSpecific;
     private byte isActive;
-    private String createdAt;
+    private Date createdAt;
 }

@@ -1,6 +1,7 @@
 package com.bookpurple.catalog.service.impl;
 
 import com.bookpurple.catalog.bo.ServiceBo;
+import com.bookpurple.catalog.entity.ServiceEntity;
 import com.bookpurple.catalog.mapper.CatalogMapper;
 import com.bookpurple.catalog.repo.master.ServiceMasterRepo;
 import com.bookpurple.catalog.repo.slave.ServiceSlaveRepo;
@@ -18,33 +19,43 @@ public class ServicesServiceImpl implements IServicesService {
     private ServiceMasterRepo masterRepo;
 
     @Autowired
-    private ServiceSlaveRepo serviceSlaveRepo;
+    private ServiceSlaveRepo slaveRepo;
 
     @Autowired
     private CatalogMapper catalogMapper;
 
     @Override
-    public ServiceBo createEvent(ServiceBo serviceBo) {
+    public ServiceBo createService(ServiceBo serviceBo) {
+        return catalogMapper.convertServiceEntityToBo(
+                masterRepo.save(
+                        catalogMapper.convertServiceEntityToBo(serviceBo)));
+    }
+
+    @Override
+    public ServiceBo updateService(ServiceBo serviceBo) {
         return null;
     }
 
     @Override
-    public ServiceBo updateEvent(ServiceBo serviceBo) {
+    public List<ServiceBo> findAllServices() {
+        return catalogMapper.convertServiceEntityListToBoList(slaveRepo.findAll());
+    }
+
+    @Override
+    public ServiceBo findServiceByName(String name) {
         return null;
     }
 
     @Override
-    public List<ServiceBo> findAllEvent() {
+    public ServiceBo findServiceById(String id) {
         return null;
     }
 
     @Override
-    public ServiceBo findEventByName(String name) {
-        return null;
-    }
-
-    @Override
-    public ServiceBo findEventById(String id) {
-        return null;
+    public void addDummyServices(List<ServiceBo> serviceBos) {
+        List<ServiceEntity> serviceEntities = catalogMapper.convertServiceBoListToEntityList(serviceBos);
+        for(ServiceEntity serviceEntity: serviceEntities) {
+            masterRepo.save(serviceEntity);
+        }
     }
 }
