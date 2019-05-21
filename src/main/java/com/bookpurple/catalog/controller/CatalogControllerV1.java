@@ -1,9 +1,12 @@
 package com.bookpurple.catalog.controller;
 
 import com.bookpurple.catalog.bo.EventBo;
+import com.bookpurple.catalog.bo.LandingRequestBo;
 import com.bookpurple.catalog.bo.ServiceBo;
+import com.bookpurple.catalog.component.ILandingPageProvider;
 import com.bookpurple.catalog.constant.Constants;
 import com.bookpurple.catalog.dto.EventDto;
+import com.bookpurple.catalog.dto.LandingPageResponseDto;
 import com.bookpurple.catalog.dto.LandingRequestDto;
 import com.bookpurple.catalog.dto.ServiceDto;
 import com.bookpurple.catalog.mapper.CatalogMapper;
@@ -25,6 +28,9 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @RestController
 @RequestMapping("/catalog/v1")
 public class CatalogControllerV1 {
+
+    @Autowired
+    private ILandingPageProvider landingPageProvider;
 
     @Autowired
     private DummyCatalogProvider dummyCatalogProvider;
@@ -51,8 +57,10 @@ public class CatalogControllerV1 {
     @PostMapping(value = Constants.UriConstants.LANDING_API,
             consumes = APPLICATION_JSON_VALUE,
             produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> getLandingPage(@RequestBody LandingRequestDto landingRequestDto) {
-        return new ResponseEntity<>("success", HttpStatus.OK);
+    public ResponseEntity<LandingPageResponseDto> getLandingPage(@RequestBody LandingRequestDto landingRequestDto) {
+        LandingRequestBo landingRequestBo = catalogMapper.convertLandingRequestDtoToBo(landingRequestDto);
+        LandingPageResponseDto landingPageResponseDto = landingPageProvider.getLandingPageData(landingRequestBo);
+        return new ResponseEntity<>(landingPageResponseDto, HttpStatus.OK);
     }
 
     /**
