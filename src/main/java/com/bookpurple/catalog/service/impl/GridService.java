@@ -1,10 +1,16 @@
 package com.bookpurple.catalog.service.impl;
 
 import com.bookpurple.catalog.bo.EventGridBo;
+import com.bookpurple.catalog.bo.LandingGridBo;
+import com.bookpurple.catalog.bo.ServiceGridBo;
 import com.bookpurple.catalog.dto.EventDto;
+import com.bookpurple.catalog.dto.EventGridDto;
+import com.bookpurple.catalog.dto.ServiceDto;
+import com.bookpurple.catalog.dto.ServiceGridDto;
 import com.bookpurple.catalog.mapper.CatalogMapper;
 import com.bookpurple.catalog.service.IEventService;
 import com.bookpurple.catalog.service.IGridService;
+import com.bookpurple.catalog.service.IServicesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,13 +26,40 @@ public class GridService implements IGridService {
     private IEventService eventService;
 
     @Autowired
+    private IServicesService servicesService;
+
+    @Autowired
     private CatalogMapper catalogMapper;
 
     @Override
-    public EventGridBo createEventGrid() {
+    public LandingGridBo createLandingGrid() {
+        EventGridDto eventGridDto = getEventGrid();
+        ServiceGridDto serviceGridDto = getServiceGrid();
+        return LandingGridBo.builder()
+                .eventGridDto(eventGridDto)
+                .serviceGridDto(serviceGridDto)
+                .build();
+    }
+
+    private EventGridDto getEventGrid() {
+        return catalogMapper.convertEventGridBoToDto(createEventGrid());
+    }
+
+    private ServiceGridDto getServiceGrid() {
+        return catalogMapper.convertServiceGridBoToDto(createServiceGrid());
+    }
+
+    private EventGridBo createEventGrid() {
         List<EventDto> eventDtos = catalogMapper.convertEventBoListToDtoList(eventService.findAllEvent());
         return EventGridBo.builder()
                 .eventDtos(eventDtos)
+                .build();
+    }
+
+    private ServiceGridBo createServiceGrid() {
+        List<ServiceDto> serviceDtos = catalogMapper.convertServiceBoListToDtoList(servicesService.findAllServices());
+        return ServiceGridBo.builder()
+                .serviceDtos(serviceDtos)
                 .build();
     }
 }

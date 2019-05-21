@@ -32,6 +32,8 @@ public interface CatalogMapper {
     List<ServiceDto> convertServiceBoListToDtoList(List<ServiceBo> ServiceBo);
 
     EventGridDto convertEventGridBoToDto(EventGridBo eventGridBo);
+    ServiceGridDto convertServiceGridBoToDto(ServiceGridBo serviceGridBo);
 
+    LandingGridDto convertLandingGridBoToDto(LandingGridBo landingGridBo);
     LandingPageResponseDto convertLandingPageResponseBoToDto(LandingPageResponseBo landingPageResponseBo);
 }

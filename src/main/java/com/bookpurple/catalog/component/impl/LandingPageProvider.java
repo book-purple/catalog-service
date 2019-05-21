@@ -3,7 +3,7 @@ package com.bookpurple.catalog.component.impl;
 import com.bookpurple.catalog.bo.LandingPageResponseBo;
 import com.bookpurple.catalog.bo.LandingRequestBo;
 import com.bookpurple.catalog.component.ILandingPageProvider;
-import com.bookpurple.catalog.dto.EventGridDto;
+import com.bookpurple.catalog.dto.LandingGridDto;
 import com.bookpurple.catalog.dto.LandingPageResponseDto;
 import com.bookpurple.catalog.mapper.CatalogMapper;
 import com.bookpurple.catalog.service.IGridService;
@@ -25,10 +25,14 @@ public class LandingPageProvider implements ILandingPageProvider {
     @Override
     public LandingPageResponseDto getLandingPageData(LandingRequestBo landingRequestBo) {
         // TODO: user landing request bo for location specific service
-        EventGridDto eventGridDto = catalogMapper.convertEventGridBoToDto(gridService.createEventGrid());
+        LandingGridDto landingGridDto = getLandingGrid();
         LandingPageResponseBo landingPageResponseBo = LandingPageResponseBo.builder()
-                .eventGrid(eventGridDto)
+                .landingGridDto(landingGridDto)
                 .build();
         return catalogMapper.convertLandingPageResponseBoToDto(landingPageResponseBo);
+    }
+
+    private LandingGridDto getLandingGrid() {
+        return catalogMapper.convertLandingGridBoToDto(gridService.createLandingGrid());
     }
 }

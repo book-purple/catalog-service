@@ -1,6 +1,8 @@
 package com.bookpurple.catalog.bo;
 
 import com.bookpurple.catalog.dto.EventGridDto;
+import com.bookpurple.catalog.dto.LandingGridDto;
+import com.bookpurple.catalog.dto.ServiceGridDto;
 import com.bookpurple.catalog.model.AbstractLandingPageResponseModel;
 import lombok.Builder;
 import lombok.Data;
@@ -16,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class LandingPageResponseBo extends AbstractLandingPageResponseModel {
 
     @Builder
-    public LandingPageResponseBo(EventGridDto eventGrid) {
-        super(eventGrid);
+    public LandingPageResponseBo(LandingGridDto landingGridDto) {
+        super(landingGridDto);
     }
 }
