@@ -1,7 +1,7 @@
-package com.bookpurple.catalog.bo;
+package com.bookpurple.catalog.bo.grid;
 
 import com.bookpurple.catalog.dto.ServiceDto;
-import com.bookpurple.catalog.model.AbstractServiceGridModel;
+import com.bookpurple.catalog.model.grid.AbstractServiceGridModel;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

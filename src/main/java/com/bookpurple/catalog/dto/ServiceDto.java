@@ -1,6 +1,6 @@
 package com.bookpurple.catalog.dto;
 
-import com.bookpurple.catalog.model.AbstractServiceModel;
+import com.bookpurple.catalog.model.grid.AbstractServiceModel;
 
 /*
  * Created by Gaurav Sharma on 21 May 2019

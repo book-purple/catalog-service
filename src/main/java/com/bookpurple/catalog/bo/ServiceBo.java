@@ -1,6 +1,6 @@
 package com.bookpurple.catalog.bo;
 
-import com.bookpurple.catalog.model.AbstractServiceModel;
+import com.bookpurple.catalog.model.grid.AbstractServiceModel;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

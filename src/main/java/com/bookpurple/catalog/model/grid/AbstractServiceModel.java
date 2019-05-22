@@ -1,4 +1,4 @@
-package com.bookpurple.catalog.model;
+package com.bookpurple.catalog.model.grid;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

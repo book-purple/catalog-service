@@ -3,7 +3,7 @@ package com.bookpurple.catalog.component.impl;
 import com.bookpurple.catalog.bo.LandingPageResponseBo;
 import com.bookpurple.catalog.bo.LandingRequestBo;
 import com.bookpurple.catalog.component.ILandingPageProvider;
-import com.bookpurple.catalog.dto.LandingGridDto;
+import com.bookpurple.catalog.dto.grid.LandingGridDto;
 import com.bookpurple.catalog.dto.LandingPageResponseDto;
 import com.bookpurple.catalog.mapper.CatalogMapper;
 import com.bookpurple.catalog.service.IGridService;

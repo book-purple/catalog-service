@@ -1,7 +1,13 @@
 package com.bookpurple.catalog.mapper;
 
 import com.bookpurple.catalog.bo.*;
+import com.bookpurple.catalog.bo.grid.EventGridBo;
+import com.bookpurple.catalog.bo.grid.LandingGridBo;
+import com.bookpurple.catalog.bo.grid.ServiceGridBo;
 import com.bookpurple.catalog.dto.*;
+import com.bookpurple.catalog.dto.grid.EventGridDto;
+import com.bookpurple.catalog.dto.grid.LandingGridDto;
+import com.bookpurple.catalog.dto.grid.ServiceGridDto;
 import com.bookpurple.catalog.entity.EventEntity;
 import com.bookpurple.catalog.entity.ServiceEntity;
 import org.mapstruct.Mapper;

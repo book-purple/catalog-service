@@ -1,7 +1,7 @@
-package com.bookpurple.catalog.bo;
+package com.bookpurple.catalog.bo.grid;
 
 import com.bookpurple.catalog.dto.EventDto;
-import com.bookpurple.catalog.model.AbstractEventGridModel;
+import com.bookpurple.catalog.model.grid.AbstractEventGridModel;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
