@@ -1,6 +1,6 @@
-package com.bookpurple.catalog.dto;
+package com.bookpurple.catalog.dto.grid;
 
-import com.bookpurple.catalog.model.AbstractLandingGridModel;
+import com.bookpurple.catalog.model.grid.AbstractLandingGridModel;
 
 /*
  * Created by Gaurav Sharma on 21 May 2019

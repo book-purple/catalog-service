@@ -1,6 +1,6 @@
 package com.bookpurple.catalog.entity;
 
-import com.bookpurple.catalog.model.AbstractServiceModel;
+import com.bookpurple.catalog.model.grid.AbstractServiceModel;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /*

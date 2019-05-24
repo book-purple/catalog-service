@@ -1,6 +1,6 @@
-package com.bookpurple.catalog.model;
+package com.bookpurple.catalog.model.grid;
 
-import com.bookpurple.catalog.dto.EventDto;
+import com.bookpurple.catalog.dto.ServiceDto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -16,8 +16,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public abstract class AbstractEventGridModel {
+public abstract class AbstractServiceGridModel {
 
-    @JsonProperty("eventTiles")
-    private List<EventDto> eventDtos;
+    @JsonProperty("serviceTiles")
+    private List<ServiceDto> serviceDtos;
 }

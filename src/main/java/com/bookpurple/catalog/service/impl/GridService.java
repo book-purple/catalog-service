@@ -1,12 +1,12 @@
 package com.bookpurple.catalog.service.impl;
 
-import com.bookpurple.catalog.bo.EventGridBo;
-import com.bookpurple.catalog.bo.LandingGridBo;
-import com.bookpurple.catalog.bo.ServiceGridBo;
+import com.bookpurple.catalog.bo.grid.EventGridBo;
+import com.bookpurple.catalog.bo.grid.LandingGridBo;
+import com.bookpurple.catalog.bo.grid.ServiceGridBo;
 import com.bookpurple.catalog.dto.EventDto;
-import com.bookpurple.catalog.dto.EventGridDto;
+import com.bookpurple.catalog.dto.grid.EventGridDto;
 import com.bookpurple.catalog.dto.ServiceDto;
-import com.bookpurple.catalog.dto.ServiceGridDto;
+import com.bookpurple.catalog.dto.grid.ServiceGridDto;
 import com.bookpurple.catalog.mapper.CatalogMapper;
 import com.bookpurple.catalog.service.IEventService;
 import com.bookpurple.catalog.service.IGridService;
