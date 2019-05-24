@@ -63,6 +63,13 @@ public class CatalogControllerV1 {
         return new ResponseEntity<>(landingPageResponseDto, HttpStatus.OK);
     }
 
+    @PostMapping(value = Constants.UriConstants.EVENT_LISTING_API,
+    consumes = APPLICATION_JSON_VALUE,
+    produces = APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> getEventListing() {
+        return new ResponseEntity("success", HttpStatus.OK);
+    }
+
     /**
      * API to get all events.
      * @return EventDto
