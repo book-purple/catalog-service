@@ -10,6 +10,9 @@ import com.bookpurple.catalog.service.IGridService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /*
  * Created by Gaurav Sharma on 21 May 2019
  */
@@ -22,14 +25,22 @@ public class LandingPageProvider implements ILandingPageProvider {
     @Autowired
     private CatalogMapper catalogMapper;
 
+    public static Map<String, LandingPageResponseDto> landingPageResponseMap = new HashMap<>();
+    private static final String KEY = "landing_page_response";
+
     @Override
     public LandingPageResponseDto getLandingPageData(LandingRequestBo landingRequestBo) {
         // TODO: user landing request bo for location specific service
-        LandingGridDto landingGridDto = getLandingGrid();
-        LandingPageResponseBo landingPageResponseBo = LandingPageResponseBo.builder()
-                .landingGridDto(landingGridDto)
-                .build();
-        return catalogMapper.convertLandingPageResponseBoToDto(landingPageResponseBo);
+        LandingPageResponseDto landingPageResponseDto = landingPageResponseMap.get(KEY);
+        if (null == landingPageResponseDto) {
+            LandingGridDto landingGridDto = getLandingGrid();
+            LandingPageResponseBo landingPageResponseBo = LandingPageResponseBo.builder()
+                    .landingGridDto(landingGridDto)
+                    .build();
+            landingPageResponseDto = catalogMapper.convertLandingPageResponseBoToDto(landingPageResponseBo);
+            landingPageResponseMap.put(KEY, landingPageResponseDto);
+        }
+        return landingPageResponseDto;
     }
 
     private LandingGridDto getLandingGrid() {
