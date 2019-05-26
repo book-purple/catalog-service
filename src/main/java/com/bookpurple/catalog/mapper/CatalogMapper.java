@@ -1,11 +1,13 @@
 package com.bookpurple.catalog.mapper;
 
-import com.bookpurple.catalog.bo.EventBo;
-import com.bookpurple.catalog.bo.LandingRequestBo;
-import com.bookpurple.catalog.bo.ServiceBo;
-import com.bookpurple.catalog.dto.EventDto;
-import com.bookpurple.catalog.dto.LandingRequestDto;
-import com.bookpurple.catalog.dto.ServiceDto;
+import com.bookpurple.catalog.bo.*;
+import com.bookpurple.catalog.bo.grid.EventGridBo;
+import com.bookpurple.catalog.bo.grid.LandingGridBo;
+import com.bookpurple.catalog.bo.grid.ServiceGridBo;
+import com.bookpurple.catalog.dto.*;
+import com.bookpurple.catalog.dto.grid.EventGridDto;
+import com.bookpurple.catalog.dto.grid.LandingGridDto;
+import com.bookpurple.catalog.dto.grid.ServiceGridDto;
 import com.bookpurple.catalog.entity.EventEntity;
 import com.bookpurple.catalog.entity.ServiceEntity;
 import org.mapstruct.Mapper;
@@ -13,7 +15,7 @@ import org.mapstruct.Mapper;
 import java.util.List;
 
 /*
- * Created by Gaurav Sharma on 19 May 2019
+ * Written by Gaurav Sharma on 19 May 2019
  */
 @Mapper(componentModel = "spring")
 public interface CatalogMapper {
@@ -34,4 +36,10 @@ public interface CatalogMapper {
     List<ServiceEntity> convertServiceBoListToEntityList(List<ServiceBo> ServiceBo);
     List<ServiceBo> convertServiceEntityListToBoList(List<ServiceEntity> ServiceEntity);
     List<ServiceDto> convertServiceBoListToDtoList(List<ServiceBo> ServiceBo);
+
+    EventGridDto convertEventGridBoToDto(EventGridBo eventGridBo);
+    ServiceGridDto convertServiceGridBoToDto(ServiceGridBo serviceGridBo);
+
+    LandingGridDto convertLandingGridBoToDto(LandingGridBo landingGridBo);
+    LandingPageResponseDto convertLandingPageResponseBoToDto(LandingPageResponseBo landingPageResponseBo);
 }

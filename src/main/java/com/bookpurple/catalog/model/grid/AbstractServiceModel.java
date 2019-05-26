@@ -1,4 +1,4 @@
-package com.bookpurple.catalog.model;
+package com.bookpurple.catalog.model.grid;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,12 +8,12 @@ import org.springframework.data.annotation.Id;
 import java.util.Date;
 
 /*
- * Created by Gaurav Sharma on 21 May 2019
+ * Written by Gaurav Sharma on 21 May 2019
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AbstractServiceModel {
+public abstract class AbstractServiceModel {
 
     @Id
     private String id;

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /*
- * Created by Gaurav Sharma on 18 May 2019
+ * Written by Gaurav Sharma on 18 May 2019
  */
 @Component
 public class ClientAuthInterceptor extends HandlerInterceptorAdapter {

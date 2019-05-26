@@ -6,7 +6,7 @@ import com.bookpurple.catalog.bo.ServiceBo;
 import java.util.List;
 
 /*
- * Created by Gaurav Sharma on 21 May 2019
+ * Written by Gaurav Sharma on 21 May 2019
  */
 public interface IServicesService {
 

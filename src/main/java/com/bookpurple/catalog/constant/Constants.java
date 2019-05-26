@@ -1,7 +1,7 @@
 package com.bookpurple.catalog.constant;
 
 /*
- * Created by Gaurav Sharma on 19 May 2019
+ * Written by Gaurav Sharma on 19 May 2019
  */
 public class Constants {
 
@@ -12,6 +12,8 @@ public class Constants {
 
     public static class UriConstants {
         public static final String LANDING_API = "/landing";
+        public static final String EVENT_LISTING_API = "/event/list";
+        public static final String SERVICE_LISTING_API = "/service/list";
 
         /*Event related URL*/
         public static final String GET_ALL_EVENT = "/event/all";

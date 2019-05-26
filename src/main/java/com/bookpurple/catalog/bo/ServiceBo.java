@@ -1,6 +1,6 @@
 package com.bookpurple.catalog.bo;
 
-import com.bookpurple.catalog.model.AbstractServiceModel;
+import com.bookpurple.catalog.model.grid.AbstractServiceModel;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 /*
- * Created by Gaurav Sharma on 21 May 2019
+ * Written by Gaurav Sharma on 21 May 2019
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
