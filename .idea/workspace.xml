@@ -2,7 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f96c070-bb2e-463c-a9c2-c0542323c034" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/proxy/IVendorServiceProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/proxy/impl/VendorServiceProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/CatalogServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/CatalogServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/EventBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/EventBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/LandingPageResponseBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/LandingPageResponseBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/LandingRequestBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/LandingRequestBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/ServiceBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/ServiceBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/grid/EventGridBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/grid/EventGridBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/grid/LandingGridBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/grid/LandingGridBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/grid/ServiceGridBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/grid/ServiceGridBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/ILandingPageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/ILandingPageProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/impl/LandingPageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/impl/LandingPageProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/constant/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/controller/CatalogControllerV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/controller/CatalogControllerV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/EventDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/EventDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/LandingPageResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/LandingPageResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/LandingRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/LandingRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/ServiceDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/ServiceDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/grid/EventGridDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/grid/EventGridDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/grid/LandingGridDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/grid/LandingGridDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/grid/ServiceGridDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/grid/ServiceGridDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/entity/EventEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/entity/EventEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/entity/ServiceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/entity/ServiceEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/interceptor/ClientAuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/interceptor/ClientAuthInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/mapper/CatalogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/mapper/CatalogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/AbstractEventModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/AbstractEventModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/AbstractLandingPageResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/AbstractLandingPageResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/AbstractLandingRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/AbstractLandingRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/grid/AbstractEventGridModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/grid/AbstractEventGridModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/grid/AbstractLandingGridModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/grid/AbstractLandingGridModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/grid/AbstractServiceGridModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/grid/AbstractServiceGridModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/grid/AbstractServiceModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/grid/AbstractServiceModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/repo/master/EventMasterRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/repo/master/EventMasterRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/repo/master/ServiceMasterRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/repo/master/ServiceMasterRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/repo/slave/EventSlaveRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/repo/slave/EventSlaveRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/repo/slave/ServiceSlaveRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/repo/slave/ServiceSlaveRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/IEventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/IEventService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/IGridService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/IGridService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/IServicesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/IServicesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/impl/EventServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/impl/EventServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/impl/GridService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/impl/GridService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/impl/ServicesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/impl/ServicesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/util/DummyCatalogProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/util/DummyCatalogProvider.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -14,27 +58,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/controller/CatalogControllerV1.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/proxy/IVendorServiceProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="61" column="83" lean-forward="true" selection-start-line="61" selection-start-column="83" selection-end-line="61" selection-end-column="83" />
-              <folding>
-                <element signature="e#2611#2612#0" expanded="true" />
-                <element signature="e#2678#2679#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/ILandingPageProvider.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/proxy/impl/VendorServiceProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -42,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/impl/LandingPageProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="78" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="78" />
+            <state relative-caret-position="450">
+              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/CatalogServiceApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -144,7 +181,11 @@
       <find>event</find>
       <find>jack</find>
       <find>eventTiles</find>
+      <find>Created by</find>
     </findStrings>
+    <replaceStrings>
+      <replace>Written by</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -202,6 +243,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/constant/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/controller/CatalogControllerV1.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/impl/LandingPageProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/proxy/impl/VendorServiceProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/proxy/IVendorServiceProxy.java" />
       </list>
     </option>
   </component>
@@ -218,7 +261,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
@@ -230,6 +273,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -263,26 +307,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="catalogservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="catalogservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="catalog" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558703660380" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558857762138" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -331,9 +365,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -351,7 +385,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32959184" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32959184" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32959184" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -361,6 +395,39 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/impl/LandingPageProvider.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/impl/LandingPageProvider.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/impl/LandingPageProvider.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>landingPageResponseMap.get(KEY)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/repo/slave/EventSlaveRepo.java">
@@ -671,6 +738,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/controller/CatalogControllerV1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="61" column="83" selection-start-line="61" selection-start-column="83" selection-end-line="61" selection-end-column="83" />
+          <folding>
+            <element signature="e#2611#2612#0" expanded="true" />
+            <element signature="e#2678#2679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/ILandingPageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/impl/LandingPageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/CatalogServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/grid/ServiceGridDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -728,41 +833,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/controller/CatalogControllerV1.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/proxy/impl/VendorServiceProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="61" column="83" lean-forward="true" selection-start-line="61" selection-start-column="83" selection-end-line="61" selection-end-column="83" />
-          <folding>
-            <element signature="e#2611#2612#0" expanded="true" />
-            <element signature="e#2678#2679#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/ILandingPageProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/proxy/IVendorServiceProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/impl/LandingPageProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="78" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/CatalogServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="45">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>

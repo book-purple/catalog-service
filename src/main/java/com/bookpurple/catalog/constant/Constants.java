@@ -1,7 +1,7 @@
 package com.bookpurple.catalog.constant;
 
 /*
- * Created by Gaurav Sharma on 19 May 2019
+ * Written by Gaurav Sharma on 19 May 2019
  */
 public class Constants {
 

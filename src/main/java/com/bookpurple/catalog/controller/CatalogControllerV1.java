@@ -23,7 +23,7 @@ import java.util.List;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 /*
- * Created by Gaurav Sharma on 19 May 2019
+ * Written by Gaurav Sharma on 19 May 2019
  */
 @RestController
 @RequestMapping("/catalog/v1")
