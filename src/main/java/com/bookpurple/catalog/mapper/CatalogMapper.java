@@ -15,7 +15,7 @@ import org.mapstruct.Mapper;
 import java.util.List;
 
 /*
- * Created by Gaurav Sharma on 19 May 2019
+ * Written by Gaurav Sharma on 19 May 2019
  */
 @Mapper(componentModel = "spring")
 public interface CatalogMapper {

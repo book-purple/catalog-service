@@ -7,7 +7,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import java.util.List;
 
 /*
- * Created by Gaurav Sharma on 21 May 2019
+ * Written by Gaurav Sharma on 21 May 2019
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class LandingPageResponseDto extends AbstractLandingPageResponseModel {

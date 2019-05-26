@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
- * Created by Gaurav Sharma on 21 May 2019
+ * Written by Gaurav Sharma on 21 May 2019
  */
 @Component
 public class LandingPageProvider implements ILandingPageProvider {
