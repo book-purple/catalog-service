@@ -7,12 +7,14 @@ import com.bookpurple.catalog.dto.VendorDto;
 import com.bookpurple.catalog.model.AbstractListingPageResponseModel.Error;
 import com.bookpurple.catalog.service.ICatalogListingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 /*
  * Written by Gaurav Sharma on 27 May 2019
  */
+@Component
 public class ListingPageProvider implements IListingPageProvider {
 
     @Autowired

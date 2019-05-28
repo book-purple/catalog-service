@@ -38,7 +38,7 @@ import java.util.Map;
 @Component
 public class HttpClientCaller {
 
-    @Value(value = "${service.hostname}")
+    @Value(value = "${vendor.service.hostname}")
     private String hostname;
 
     @Value(value = "${access.token}")
