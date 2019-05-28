@@ -2,13 +2,12 @@ package com.bookpurple.catalog.controller;
 
 import com.bookpurple.catalog.bo.EventBo;
 import com.bookpurple.catalog.bo.LandingRequestBo;
+import com.bookpurple.catalog.bo.ListingPageRequestBo;
 import com.bookpurple.catalog.bo.ServiceBo;
 import com.bookpurple.catalog.component.ILandingPageProvider;
+import com.bookpurple.catalog.component.IListingPageProvider;
 import com.bookpurple.catalog.constant.Constants;
-import com.bookpurple.catalog.dto.EventDto;
-import com.bookpurple.catalog.dto.LandingPageResponseDto;
-import com.bookpurple.catalog.dto.LandingRequestDto;
-import com.bookpurple.catalog.dto.ServiceDto;
+import com.bookpurple.catalog.dto.*;
 import com.bookpurple.catalog.mapper.CatalogMapper;
 import com.bookpurple.catalog.service.IEventService;
 import com.bookpurple.catalog.service.IServicesService;
@@ -31,6 +30,9 @@ public class CatalogControllerV1 {
 
     @Autowired
     private ILandingPageProvider landingPageProvider;
+
+    @Autowired
+    private IListingPageProvider listingPageProvider;
 
     @Autowired
     private DummyCatalogProvider dummyCatalogProvider;
@@ -63,11 +65,20 @@ public class CatalogControllerV1 {
         return new ResponseEntity<>(landingPageResponseDto, HttpStatus.OK);
     }
 
+    /**
+     * Listing API to fetch all the vendors based on Catalog Request Id
+     * @param listingPageRequestDto listingPageRequestDto
+     * @return listingPageResponseDto listingPageResponseDto
+     */
     @PostMapping(value = Constants.UriConstants.LISTING_API,
     consumes = APPLICATION_JSON_VALUE,
     produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> getEventListing() {
-        return new ResponseEntity("success", HttpStatus.OK);
+    public ResponseEntity<ListingPageResponseDto> getCatalogListing(@RequestBody ListingPageRequestDto listingPageRequestDto) {
+        ListingPageRequestBo listingPageRequestBo = catalogMapper.convertListingRequestDtoToBo(listingPageRequestDto);
+        ListingPageResponseDto listingPageResponseDto = catalogMapper
+                .convertListingResponseBoToDto(listingPageProvider
+                        .provideListingPage(listingPageRequestBo));
+        return new ResponseEntity<>(listingPageResponseDto, HttpStatus.OK);
     }
 
     /**
@@ -78,7 +89,7 @@ public class CatalogControllerV1 {
     produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<List<EventDto>> getAllEvent() {
         List<EventDto> eventDtos = catalogMapper.convertEventBoListToDtoList(eventService.findAllEvent());
-        return new ResponseEntity(eventDtos, HttpStatus.OK);
+        return new ResponseEntity<List<EventDto>>(eventDtos, HttpStatus.OK);
     }
 
     /**
@@ -113,7 +124,7 @@ public class CatalogControllerV1 {
             produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ServiceDto>> getAllServices() {
         List<ServiceDto> serviceDtos = catalogMapper.convertServiceBoListToDtoList(servicesService.findAllServices());
-        return new ResponseEntity(serviceDtos, HttpStatus.OK);
+        return new ResponseEntity<>(serviceDtos, HttpStatus.OK);
     }
 
     /**

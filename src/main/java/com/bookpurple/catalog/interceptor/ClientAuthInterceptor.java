@@ -20,6 +20,8 @@ public class ClientAuthInterceptor extends HandlerInterceptorAdapter {
     @Value("${basic.auth.token}")
     private String basicAuthToken;
 
+    @Value(value = "${access.token}")
+    private String accessToken;
     /**
      * This function intercept all open API requests
      *
@@ -33,6 +35,10 @@ public class ClientAuthInterceptor extends HandlerInterceptorAdapter {
         String authToken = request.getHeader(Constants.SecurityConstants.AUTHORIZATION);
         if (basicAuthToken.equals(authToken)) {
             logger.error("--- Authorization Success ---");
+            return true;
+        }
+        if (accessToken.equals(authToken)) {
+            logger.error("--- Authorization Success for Internal API Call---");
             return true;
         }
         logger.error("--- Authorization failed ---");

@@ -42,4 +42,10 @@ public interface CatalogMapper {
 
     LandingGridDto convertLandingGridBoToDto(LandingGridBo landingGridBo);
     LandingPageResponseDto convertLandingPageResponseBoToDto(LandingPageResponseBo landingPageResponseBo);
+
+    ListingPageRequestBo convertListingRequestDtoToBo(ListingPageRequestDto listingPageRequestDto);
+    ListingPageResponseDto convertListingResponseBoToDto(ListingPageResponseBo listingPageResponseBo);
+
+    VendorBo convertVendorDtoToBo(VendorDto vendorDto);
+    VendorDto convertVendorBo(VendorBo vendorBo);
 }
