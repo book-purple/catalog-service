@@ -12,7 +12,7 @@ public class Constants {
 
     public static class UriConstants {
         public static final String LANDING_API = "/landing";
-        public static final String EVENT_LISTING_API = "/event/list";
+        public static final String LISTING_API = "/listing";
         public static final String SERVICE_LISTING_API = "/service/list";
 
         /*Event related URL*/
