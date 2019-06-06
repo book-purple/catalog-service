@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class VendorBo extends AbstractVendorModel {
 
     @Builder
-    public VendorBo(String id, String name, String image, double rating, String desc) {
-        super(id, name, image, rating, desc);
+    public VendorBo(String id, String name, String image, double rating, String desc, int viewType) {
+        super(id, name, image, rating, desc, 1);
     }
 }
