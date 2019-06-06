@@ -42,6 +42,7 @@ public class ListingPageProvider implements IListingPageProvider {
                         error = new Error();
                         error.setError("No vendors found!");
                     }
+                    listingPageResponseBo.setVendors(vendorDtos);
                 } else {
                     error = new Error();
                     error.setError("No vendors found!");

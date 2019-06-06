@@ -42,7 +42,7 @@ public class HttpClientCaller {
     private String hostname;
 
     @Value(value = "${access.token}")
-    private String accesToken;
+    private String accessToken;
 
     private static int serviceMaxConnections = 1000;
 
@@ -166,7 +166,7 @@ public class HttpClientCaller {
         httpget.setConfig(requestConfig);
         if (isInternal) {
             if (userAccesToken == null) {
-                userAccesToken = accesToken;
+                userAccesToken = accessToken;
             }
             httpget.setHeader(Constants.SecurityConstants.X_GBP_AUTH, userAccesToken);
         }
@@ -177,7 +177,7 @@ public class HttpClientCaller {
         }
         LOGGER.info("Service : " + serviceHostname + requestUrl);
         LOGGER
-                .info("******* Helpchat Auth Token : " + userAccesToken + " Access Token : " + accesToken);
+                .info("******* Helpchat Auth Token : " + userAccesToken + " Access Token : " + accessToken);
         CloseableHttpResponse response = null;
         try {
             response = httpclientWithRetry.execute(httpget);
@@ -233,7 +233,7 @@ public class HttpClientCaller {
             if (null != helpchatAuthToken) {
                 httpPut.setHeader(Constants.SecurityConstants.X_GBP_AUTH, helpchatAuthToken);
             } else {
-                httpPut.setHeader(Constants.SecurityConstants.X_GBP_AUTH, accesToken);
+                httpPut.setHeader(Constants.SecurityConstants.X_GBP_AUTH, accessToken);
             }
             StringEntity stringEntity = new StringEntity(requestBody, ContentType.APPLICATION_JSON);
             httpPut.setEntity(stringEntity);
@@ -247,7 +247,7 @@ public class HttpClientCaller {
             LOGGER.info("Service Response:" + response.getStatusLine().getStatusCode() + ",requestBody:"
                     + requestBody);
             LOGGER.info(
-                    "******* Helpchat Auth Token : " + helpchatAuthToken + " Access Token : " + accesToken);
+                    "******* Helpchat Auth Token : " + helpchatAuthToken + " Access Token : " + accessToken);
             httpPutResponse.setStatus(HttpStatus.valueOf(response.getStatusLine().getStatusCode()));
             if (response.getStatusLine().getStatusCode() != HttpStatus.OK.value()) {
                 LOGGER.error("Bad Response Code :" + requestUrl + " "
@@ -266,20 +266,20 @@ public class HttpClientCaller {
      *
      * @param serviceHostname   the service hostname
      * @param requestUrl        the request url
-     * @param helpchatAuthToken the helpchat auth token
+     * @param bpAuthToken the helpchat auth token
      * @param requestBody       the request body
      * @param customHeaders     the request headers
      * @param withRetry         flag to determine retrial
      * @return the http post response
      */
     public HttpPostResponse httpPostInternalApiCall(String serviceHostname, String requestUrl,
-                                                    String helpchatAuthToken, String requestBody, Map<String, String> customHeaders,
+                                                    String bpAuthToken, String requestBody, Map<String, String> customHeaders,
                                                     Boolean withRetry)
             throws Exception {
         return httpPostApiCall(serviceHostname,
                 requestUrl,
                 null,
-                helpchatAuthToken,
+                bpAuthToken,
                 requestBody,
                 customHeaders,
                 defaultAliveDurInternalPostAPI,
@@ -317,7 +317,7 @@ public class HttpClientCaller {
      * @param serviceHostname   the service hostname
      * @param requestUrl        the request url
      * @param requestParams     the request params
-     * @param helpchatAuthToken the auth token
+     * @param BpAuthToken the auth token
      * @param requestBody       the request body
      * @param requestHeaders    the request headers
      * @param timeout           timeout value
@@ -326,7 +326,7 @@ public class HttpClientCaller {
      * @return the http post response
      */
     public HttpPostResponse httpPostApiCall(String serviceHostname, String requestUrl,
-                                            Map<String, String> requestParams, String helpchatAuthToken, String requestBody,
+                                            Map<String, String> requestParams, String BpAuthToken, String requestBody,
                                             Map<String, String> requestHeaders, Integer timeout,
                                             boolean isInternal, boolean withRetry)
             throws Exception {
@@ -351,10 +351,10 @@ public class HttpClientCaller {
                     RequestConfig.custom().setSocketTimeout(timeout).setConnectTimeout(timeout).build();
             httpPost.setConfig(requestConfig);
             if (isInternal) {
-                if (null != helpchatAuthToken) {
-                    httpPost.setHeader(Constants.SecurityConstants.X_GBP_AUTH, helpchatAuthToken);
+                if (null != BpAuthToken) {
+                    httpPost.setHeader(Constants.SecurityConstants.X_GBP_AUTH, BpAuthToken);
                 } else {
-                    httpPost.setHeader(Constants.SecurityConstants.X_GBP_AUTH, accesToken);
+                    httpPost.setHeader(Constants.SecurityConstants.X_GBP_AUTH, accessToken);
                 }
             }
             if (null != requestHeaders) {
@@ -368,7 +368,7 @@ public class HttpClientCaller {
             }
             LOGGER.info("Service : " + serviceHostname + requestUrl + ",\n Body:" + requestBody);
             LOGGER.info(
-                    "******* Helpchat Auth Token : " + helpchatAuthToken + " Access Token : " + accesToken);
+                    "******* BookPurple Auth Token : " + BpAuthToken + " Access Token : " + accessToken);
             if (null != requestBody) {
                 StringEntity stringEntity = new StringEntity(requestBody, ContentType.APPLICATION_JSON);
                 httpPost.setEntity(stringEntity);

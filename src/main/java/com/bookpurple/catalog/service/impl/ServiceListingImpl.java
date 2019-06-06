@@ -1,6 +1,7 @@
 package com.bookpurple.catalog.service.impl;
 
 import com.bookpurple.catalog.bo.VendorBo;
+import com.bookpurple.catalog.bo.VendorMappingRequestBo;
 import com.bookpurple.catalog.dto.VendorDto;
 import com.bookpurple.catalog.enums.ListingRequestTypes;
 import com.bookpurple.catalog.proxy.IVendorServiceProxy;
@@ -26,6 +27,10 @@ public class ServiceListingImpl implements ICatalogListingService {
 
     @Override
     public List<VendorDto> getVendorListing(String serviceId) {
-        return vendorServiceProxy.getAllVendors(serviceId);
+        VendorMappingRequestBo vendorMappingRequestBo = VendorMappingRequestBo.builder()
+                .serviceId(serviceId)
+                .build();
+        vendorServiceProxy.getAllVendors(vendorMappingRequestBo);
+        return null;
     }
 }

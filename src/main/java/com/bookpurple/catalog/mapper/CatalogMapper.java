@@ -48,4 +48,6 @@ public interface CatalogMapper {
 
     VendorBo convertVendorDtoToBo(VendorDto vendorDto);
     VendorDto convertVendorBo(VendorBo vendorBo);
+
+    VendorMappingRequestDto convertVendorMappingRequestBoToDto(VendorMappingRequestBo vendorMappingRequestBo);
 }

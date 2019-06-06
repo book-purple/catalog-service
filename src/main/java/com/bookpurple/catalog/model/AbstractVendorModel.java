@@ -22,7 +22,7 @@ public abstract class AbstractVendorModel {
     @JsonProperty("vendor_image")
     private String image;
     @JsonProperty("vendor_rating")
-    private long rating;
+    private double rating;
     @JsonProperty("vendor_desc")
     private String desc;
 }

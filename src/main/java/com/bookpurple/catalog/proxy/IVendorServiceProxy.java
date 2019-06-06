@@ -1,5 +1,7 @@
 package com.bookpurple.catalog.proxy;
 
+import com.bookpurple.catalog.bo.VendorMappingRequestBo;
+import com.bookpurple.catalog.dto.CatalogVendorMappingResponseDto;
 import com.bookpurple.catalog.dto.VendorDto;
 
 import java.util.List;
@@ -9,5 +11,5 @@ import java.util.List;
  */
 public interface IVendorServiceProxy {
 
-    List<VendorDto> getAllVendors(String requestId);
+    CatalogVendorMappingResponseDto getAllVendors(VendorMappingRequestBo vendorMappingRequestBo);
 }
