@@ -50,7 +50,7 @@ public class EventListingImpl implements ICatalogListingService {
         List<CatalogVendorMappingResponseDto.VendorEntity> vendorEntities =
                 catalogVendorMappingResponseDto.getEventVendorMappingBo().getVendorEntities();
         List<VendorDto> vendorDtos = new ArrayList<>();
-        for(CatalogVendorMappingResponseDto.VendorEntity vendorEntity: vendorEntities){
+        for (CatalogVendorMappingResponseDto.VendorEntity vendorEntity : vendorEntities) {
             VendorBo vendorBo = VendorBo.builder()
                     .name(vendorEntity.getName())
                     .id(vendorEntity.getId())

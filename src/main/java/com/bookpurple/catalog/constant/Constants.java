@@ -22,7 +22,7 @@ public class Constants {
 
         /*Service related URL*/
         public static final String GET_ALL_SERVICES = "/service/all";
-        public static final String ADD_DUMMY_SERVICES= "/dummy/service/add";
+        public static final String ADD_DUMMY_SERVICES = "/dummy/service/add";
         public static final String ADD_SERVICE = "/service/add";
     }
 }

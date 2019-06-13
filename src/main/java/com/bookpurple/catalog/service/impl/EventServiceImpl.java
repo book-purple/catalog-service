@@ -60,7 +60,7 @@ public class EventServiceImpl implements IEventService {
     @Override
     public void addDummyEvents(List<EventBo> eventBos) {
         List<EventEntity> eventEntities = catalogMapper.convertEventBoListToEntityList(eventBos);
-        for(EventEntity eventEntity: eventEntities) {
+        for (EventEntity eventEntity : eventEntities) {
             masterRepo.save(eventEntity);
         }
     }

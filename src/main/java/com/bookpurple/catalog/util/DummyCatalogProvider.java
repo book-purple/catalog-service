@@ -49,7 +49,7 @@ public class DummyCatalogProvider {
     }
 
     private ServiceBo getDummyService(String name,
-                                  String icon) {
+                                      String icon) {
         return ServiceBo.builder()
                 .name(name)
                 .icon(icon)

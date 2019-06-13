@@ -264,12 +264,12 @@ public class HttpClientCaller {
     /**
      * Http post api method for internal calls.
      *
-     * @param serviceHostname   the service hostname
-     * @param requestUrl        the request url
-     * @param bpAuthToken the helpchat auth token
-     * @param requestBody       the request body
-     * @param customHeaders     the request headers
-     * @param withRetry         flag to determine retrial
+     * @param serviceHostname the service hostname
+     * @param requestUrl      the request url
+     * @param bpAuthToken     the helpchat auth token
+     * @param requestBody     the request body
+     * @param customHeaders   the request headers
+     * @param withRetry       flag to determine retrial
      * @return the http post response
      */
     public HttpPostResponse httpPostInternalApiCall(String serviceHostname, String requestUrl,
@@ -314,15 +314,15 @@ public class HttpClientCaller {
     /**
      * Http post api method for external calls.
      *
-     * @param serviceHostname   the service hostname
-     * @param requestUrl        the request url
-     * @param requestParams     the request params
-     * @param BpAuthToken the auth token
-     * @param requestBody       the request body
-     * @param requestHeaders    the request headers
-     * @param timeout           timeout value
-     * @param isInternal        flag to determine internal or external
-     * @param withRetry         flag to determine retrial
+     * @param serviceHostname the service hostname
+     * @param requestUrl      the request url
+     * @param requestParams   the request params
+     * @param BpAuthToken     the auth token
+     * @param requestBody     the request body
+     * @param requestHeaders  the request headers
+     * @param timeout         timeout value
+     * @param isInternal      flag to determine internal or external
+     * @param withRetry       flag to determine retrial
      * @return the http post response
      */
     public HttpPostResponse httpPostApiCall(String serviceHostname, String requestUrl,

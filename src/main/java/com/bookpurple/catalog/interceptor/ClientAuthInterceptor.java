@@ -22,6 +22,7 @@ public class ClientAuthInterceptor extends HandlerInterceptorAdapter {
 
     @Value(value = "${access.token}")
     private String accessToken;
+
     /**
      * This function intercept all open API requests
      *

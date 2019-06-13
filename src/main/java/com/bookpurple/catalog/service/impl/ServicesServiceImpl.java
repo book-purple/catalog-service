@@ -60,7 +60,7 @@ public class ServicesServiceImpl implements IServicesService {
     @Override
     public void addDummyServices(List<ServiceBo> serviceBos) {
         List<ServiceEntity> serviceEntities = catalogMapper.convertServiceBoListToEntityList(serviceBos);
-        for(ServiceEntity serviceEntity: serviceEntities) {
+        for (ServiceEntity serviceEntity : serviceEntities) {
             masterRepo.save(serviceEntity);
         }
     }

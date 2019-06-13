@@ -34,7 +34,7 @@ public class ListingPageProvider implements IListingPageProvider {
         List<VendorDto> vendorDtos = null;
         Error error = null;
         // 1. Make catalog List (event/services)
-        for(ICatalogListingService catalogListingService: catalogListingServices) {
+        for (ICatalogListingService catalogListingService : catalogListingServices) {
             if (catalogListingService.catalogListType().equalsIgnoreCase(requestType)) {
                 vendorDtos = catalogListingService.getVendorListing(requestId);
                 if (null != vendorDtos) {

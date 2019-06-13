@@ -53,6 +53,7 @@ public class CatalogControllerV1 {
 
     /**
      * Landing API to fetch Landing page related data.
+     *
      * @param landingRequestDto landingRequestDto
      * @return LandingResponseDto landingResponseDto
      */
@@ -67,12 +68,13 @@ public class CatalogControllerV1 {
 
     /**
      * Listing API to fetch all the vendors based on Catalog Request Id
+     *
      * @param listingPageRequestDto listingPageRequestDto
      * @return listingPageResponseDto listingPageResponseDto
      */
     @PostMapping(value = Constants.UriConstants.LISTING_API,
-    consumes = APPLICATION_JSON_VALUE,
-    produces = APPLICATION_JSON_VALUE)
+            consumes = APPLICATION_JSON_VALUE,
+            produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<ListingPageResponseDto> getCatalogListing(@RequestBody ListingPageRequestDto listingPageRequestDto) {
         ListingPageRequestBo listingPageRequestBo = catalogMapper.convertListingRequestDtoToBo(listingPageRequestDto);
         ListingPageResponseDto listingPageResponseDto = catalogMapper
@@ -83,10 +85,11 @@ public class CatalogControllerV1 {
 
     /**
      * API to get all events.
+     *
      * @return EventDto
      */
     @GetMapping(value = Constants.UriConstants.GET_ALL_EVENT,
-    produces = APPLICATION_JSON_VALUE)
+            produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<List<EventDto>> getAllEvent() {
         List<EventDto> eventDtos = catalogMapper.convertEventBoListToDtoList(eventService.findAllEvent());
         return new ResponseEntity<List<EventDto>>(eventDtos, HttpStatus.OK);
@@ -94,6 +97,7 @@ public class CatalogControllerV1 {
 
     /**
      * API to add new event.
+     *
      * @param eventDto eventDto
      * @return success as string
      */
@@ -108,6 +112,7 @@ public class CatalogControllerV1 {
 
     /**
      * API to add dummy data for events.
+     *
      * @return success as string
      */
     @GetMapping(value = Constants.UriConstants.ADD_DUMMY_EVENT, produces = APPLICATION_JSON_VALUE)
@@ -118,6 +123,7 @@ public class CatalogControllerV1 {
 
     /**
      * API to get all services.
+     *
      * @return EventDto
      */
     @GetMapping(value = Constants.UriConstants.GET_ALL_SERVICES,
@@ -129,6 +135,7 @@ public class CatalogControllerV1 {
 
     /**
      * API to add new service.
+     *
      * @param serviceDto serviceDto
      * @return success as string
      */
@@ -143,6 +150,7 @@ public class CatalogControllerV1 {
 
     /**
      * API to add dummy data for services.
+     *
      * @return success as string
      */
     @GetMapping(value = Constants.UriConstants.ADD_DUMMY_SERVICES, produces = APPLICATION_JSON_VALUE)
