@@ -1,2 +1,7 @@
 compiler.xml
 workspace.xml
+.classpath
+.factorypath
+.project
+.settings/
+target/
