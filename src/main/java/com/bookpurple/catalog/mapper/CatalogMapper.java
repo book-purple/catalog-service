@@ -1,6 +1,7 @@
 package com.bookpurple.catalog.mapper;
 
 import com.bookpurple.catalog.bo.*;
+import com.bookpurple.catalog.bo.banner.BannerBo;
 import com.bookpurple.catalog.bo.grid.EventGridBo;
 import com.bookpurple.catalog.bo.grid.LandingGridBo;
 import com.bookpurple.catalog.bo.grid.ServiceGridBo;
@@ -8,6 +9,7 @@ import com.bookpurple.catalog.dto.*;
 import com.bookpurple.catalog.dto.grid.EventGridDto;
 import com.bookpurple.catalog.dto.grid.LandingGridDto;
 import com.bookpurple.catalog.dto.grid.ServiceGridDto;
+import com.bookpurple.catalog.entity.BannerEntity;
 import com.bookpurple.catalog.entity.EventEntity;
 import com.bookpurple.catalog.entity.ServiceEntity;
 import org.mapstruct.Mapper;
@@ -24,12 +26,14 @@ public interface CatalogMapper {
     LandingRequestBo convertLandingRequestDtoToBo(LandingRequestDto landingRequestDto);
 
     EventEntity convertEventBoToEntity(EventBo eventBo);
+    BannerEntity convertBannerBoToEntity(BannerBo bannerBo);
     EventBo convertEventEntityToBo(EventEntity eventEntity);
+    BannerBo convertBannerEntityToBo(BannerEntity bannerEntity);
     EventBo convertEventDtoToBo(EventDto eventDto);
     List<EventEntity> convertEventBoListToEntityList(List<EventBo> eventBos);
     List<EventBo> convertEventEntityListToBoList(List<EventEntity> eventEntities);
     List<EventDto> convertEventBoListToDtoList(List<EventBo> eventBos);
-
+    List<BannerBo> convertBannerEntityListToBoList(List<BannerEntity> bannerEntities);
     ServiceEntity convertServiceEntityToBo(ServiceBo serviceBo);
     ServiceBo convertServiceEntityToBo(ServiceEntity serviceEntity);
     ServiceBo convertServiceDtoToBo(ServiceDto ServiceDto);
