@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f96c070-bb2e-463c-a9c2-c0542323c034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/banner/BannerRequestBo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/banner/BannerResponseBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/bo/banner/BannerResponseBo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/AbstractBannerRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/BannerRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/mapper/CatalogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/mapper/CatalogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/AbstractBannerResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/model/AbstractBannersResponseModel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +109,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
