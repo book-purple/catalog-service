@@ -1,6 +1,6 @@
 package com.bookpurple.catalog.bo.banner;
 
-import com.bookpurple.catalog.model.AbstractBannerResponseModel;
+import com.bookpurple.catalog.model.AbstractBannersResponseModel;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -14,10 +14,10 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-public class BannerResponseBo extends AbstractBannerResponseModel {
+public class BannerResponseBo extends AbstractBannersResponseModel {
 
     @Builder
-    public BannerResponseBo(List<BannerBO> banners) {
+    public BannerResponseBo(List<BannerBo> banners) {
         super(banners);
     }
 }

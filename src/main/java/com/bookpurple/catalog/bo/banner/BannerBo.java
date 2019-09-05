@@ -12,10 +12,10 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @AllArgsConstructor
-public class BannerBO extends AbstractBannerModel {
+public class BannerBo extends AbstractBannerModel {
 
     @Builder
-    public BannerBO(String id, String name, String url) {
+    public BannerBo(String id, String name, String url) {
         super(id, name, url);
     }
 }

@@ -1,8 +1,11 @@
 package com.bookpurple.catalog.service;
 
-import com.bookpurple.catalog.bo.banner.BannerResponseBo;
+import com.bookpurple.catalog.bo.banner.BannerBo;
+
+import java.util.List;
 
 public interface IBannerService {
 
-    BannerResponseBo getBanners();
+    List<BannerBo> findAllBanners();
+    BannerBo createBanner(BannerBo bannerBo);
 }
