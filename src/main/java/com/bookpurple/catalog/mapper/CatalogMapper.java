@@ -2,6 +2,7 @@ package com.bookpurple.catalog.mapper;
 
 import com.bookpurple.catalog.bo.*;
 import com.bookpurple.catalog.bo.banner.BannerBo;
+import com.bookpurple.catalog.bo.banner.BannerRequestBo;
 import com.bookpurple.catalog.bo.grid.EventGridBo;
 import com.bookpurple.catalog.bo.grid.LandingGridBo;
 import com.bookpurple.catalog.bo.grid.ServiceGridBo;
@@ -24,26 +25,28 @@ public interface CatalogMapper {
 
     /*Landing Page Mappings*/
     LandingRequestBo convertLandingRequestDtoToBo(LandingRequestDto landingRequestDto);
-
     EventEntity convertEventBoToEntity(EventBo eventBo);
-    BannerEntity convertBannerBoToEntity(BannerBo bannerBo);
     EventBo convertEventEntityToBo(EventEntity eventEntity);
-    BannerBo convertBannerEntityToBo(BannerEntity bannerEntity);
     EventBo convertEventDtoToBo(EventDto eventDto);
     List<EventEntity> convertEventBoListToEntityList(List<EventBo> eventBos);
     List<EventBo> convertEventEntityListToBoList(List<EventEntity> eventEntities);
     List<EventDto> convertEventBoListToDtoList(List<EventBo> eventBos);
-    List<BannerBo> convertBannerEntityListToBoList(List<BannerEntity> bannerEntities);
     ServiceEntity convertServiceEntityToBo(ServiceBo serviceBo);
     ServiceBo convertServiceEntityToBo(ServiceEntity serviceEntity);
     ServiceBo convertServiceDtoToBo(ServiceDto ServiceDto);
     List<ServiceEntity> convertServiceBoListToEntityList(List<ServiceBo> ServiceBo);
     List<ServiceBo> convertServiceEntityListToBoList(List<ServiceEntity> ServiceEntity);
     List<ServiceDto> convertServiceBoListToDtoList(List<ServiceBo> ServiceBo);
-
     EventGridDto convertEventGridBoToDto(EventGridBo eventGridBo);
     ServiceGridDto convertServiceGridBoToDto(ServiceGridBo serviceGridBo);
-
     LandingGridDto convertLandingGridBoToDto(LandingGridBo landingGridBo);
     LandingPageResponseDto convertLandingPageResponseBoToDto(LandingPageResponseBo landingPageResponseBo);
+
+    /*
+    * Mapper for Banner
+    * */
+    BannerEntity convertBannerBoToEntity(BannerBo bannerBo);
+    BannerBo convertBannerEntityToBo(BannerEntity bannerEntity);
+    List<BannerBo> convertBannerEntityListToBoList(List<BannerEntity> bannerEntities);
+    BannerRequestBo convertBannerRequestDtoToBo(BannerRequestDto bannerRequestDto);
 }

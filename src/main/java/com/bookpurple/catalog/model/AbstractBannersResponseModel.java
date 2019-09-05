@@ -14,7 +14,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public abstract class AbstractBannerResponseModel {
+public abstract class AbstractBannersResponseModel {
 
 
     @JsonProperty("banners")
