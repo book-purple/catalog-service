@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f96c070-bb2e-463c-a9c2-c0542323c034" name="Default Changelist" comment="" />
+    <list default="true" id="1f96c070-bb2e-463c-a9c2-c0542323c034" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/proxy/IOrdersServiceProxy.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,16 +14,34 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8083004">
+    <splitter split-orientation="horizontal" split-proportion="0.8161718">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.17359413">
+        <splitter split-orientation="horizontal" split-proportion="0.86831915">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/controller/CatalogControllerV1.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="330">
-                      <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+                    <state relative-caret-position="180">
+                      <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/impl/LandingPageProvider.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="465">
+                      <caret line="42" column="51" lean-forward="true" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/proxy/IOrdersServiceProxy.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="105">
+                      <caret line="7" selection-start-line="7" selection-end-line="7" />
                     </state>
                   </provider>
                 </entry>
@@ -33,8 +53,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/impl/BannerServiceImpl.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="412">
-                      <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+                    <state relative-caret-position="142">
+                      <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
@@ -47,14 +67,14 @@
         </splitter>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.84241706">
+        <splitter split-orientation="horizontal" split-proportion="0.54137933">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/repo/master/EventMasterRepo.java">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="150">
-                      <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+                      <caret line="12" selection-start-line="12" selection-end-line="12" />
                     </state>
                   </provider>
                 </entry>
@@ -63,7 +83,7 @@
                 <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/repo/slave/EventSlaveRepo.java">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="150">
-                      <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+                      <caret line="12" selection-start-line="12" selection-end-line="12" />
                     </state>
                   </provider>
                 </entry>
@@ -76,7 +96,7 @@
                 <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/entity/EventEntity.java">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="165">
-                      <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+                      <caret line="11" selection-start-line="11" selection-end-line="11" />
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
@@ -93,8 +113,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -115,6 +135,14 @@
       <map>
         <entry key="$PROJECT_DIR$" value="listing_api" />
       </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/impl/LandingPageProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/proxy/IOrdersServiceProxy.java" />
+      </list>
     </option>
   </component>
   <component name="MavenImportPreferences">
@@ -174,14 +202,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="proxy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="catalogservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="catalogservice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="proxy" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -244,9 +275,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.072649576" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2039072" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -325,24 +355,45 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/repo/slave/EventSlaveRepo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/controller/CatalogControllerV1.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.5.RELEASE/spring-context-5.1.5.RELEASE.jar!/org/springframework/stereotype/Service.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="150">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/impl/BannerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        <state relative-caret-position="142">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/controller/CatalogControllerV1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/component/impl/LandingPageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="42" column="51" lean-forward="true" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/proxy/IOrdersServiceProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
