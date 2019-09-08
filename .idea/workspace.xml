@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f96c070-bb2e-463c-a9c2-c0542323c034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/dto/BannerResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/constant/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/controller/CatalogControllerV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/controller/CatalogControllerV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/mapper/CatalogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/mapper/CatalogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/IBannerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/IBannerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/impl/BannerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookpurple/catalog/service/impl/BannerServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="1f96c070-bb2e-463c-a9c2-c0542323c034" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
