@@ -6,3 +6,4 @@ workspace.xml
 .settings/
 target/
 .idea/*
+.idea/workspace.xml
