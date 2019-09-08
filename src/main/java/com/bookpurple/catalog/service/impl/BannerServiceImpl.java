@@ -30,9 +30,13 @@ public class BannerServiceImpl implements IBannerService {
 
     @Override
     public BannerBo createBanner(BannerRequestBo bannerRequestBo) {
+        BannerBo bannerBo = BannerBo.builder()
+                .name(bannerRequestBo.getName())
+                .url(bannerRequestBo.getUrl())
+                .build();
         return catalogMapper
                 .convertBannerEntityToBo(masterRepo
                         .save(catalogMapper
-                                .convertBannerBoToEntity(bannerRequestBo)));
+                                .convertBannerBoToEntity(bannerBo)));
     }
 }

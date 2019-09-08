@@ -143,14 +143,17 @@ public class CatalogControllerV1 {
         return new ResponseEntity<>("success", HttpStatus.OK);
     }
 
-    @PostMapping(value = Constants.UriConstants.ADD_BANNER, produces = APPLICATION_JSON_VALUE)
+    @PostMapping(value = Constants.UriConstants.ADD_BANNER,
+            consumes = APPLICATION_JSON_VALUE,
+            produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<String> addBanner(@RequestBody BannerRequestDto bannerRequestDto){
         BannerRequestBo bannerRequestBo = catalogMapper.convertBannerRequestDtoToBo(bannerRequestDto);
         bannerService.createBanner(bannerRequestBo);
         return new ResponseEntity<>("success",HttpStatus.OK);
     }
 
-    @GetMapping(value = Constants.UriConstants.GET_ALL_BANNERS, produces = APPLICATION_JSON_VALUE)
+    @GetMapping(value = Constants.UriConstants.GET_ALL_BANNERS,
+            produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<List<BannerResponseDto>> getAllBanners(){
         List<BannerResponseDto> bannerResponseDtos = catalogMapper.convertBannerBoListToBannerResponseDtoList(bannerService.findAllBanners());
         return new ResponseEntity(bannerResponseDtos, HttpStatus.OK);

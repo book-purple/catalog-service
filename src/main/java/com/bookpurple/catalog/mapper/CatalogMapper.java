@@ -45,7 +45,7 @@ public interface CatalogMapper {
     /*
     * Mapper for Banner
     * */
-    BannerEntity convertBannerBoToEntity(BannerRequestBo bannerRequestBo);
+    BannerEntity convertBannerBoToEntity(BannerBo bannerBo);
     BannerBo convertBannerEntityToBo(BannerEntity bannerEntity);
     List<BannerBo> convertBannerEntityListToBoList(List<BannerEntity> bannerEntities);
     BannerRequestBo convertBannerRequestDtoToBo(BannerRequestDto bannerRequestDto);
