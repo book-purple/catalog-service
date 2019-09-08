@@ -3,6 +3,7 @@ package com.bookpurple.catalog.mapper;
 import com.bookpurple.catalog.bo.*;
 import com.bookpurple.catalog.bo.banner.BannerBo;
 import com.bookpurple.catalog.bo.banner.BannerRequestBo;
+import com.bookpurple.catalog.bo.banner.BannerResponseBo;
 import com.bookpurple.catalog.bo.grid.EventGridBo;
 import com.bookpurple.catalog.bo.grid.LandingGridBo;
 import com.bookpurple.catalog.bo.grid.ServiceGridBo;
@@ -49,6 +50,6 @@ public interface CatalogMapper {
     BannerBo convertBannerEntityToBo(BannerEntity bannerEntity);
     List<BannerBo> convertBannerEntityListToBoList(List<BannerEntity> bannerEntities);
     BannerRequestBo convertBannerRequestDtoToBo(BannerRequestDto bannerRequestDto);
-    List<BannerResponseDto> convertBannerBoListToBannerResponseDtoList(List<BannerBo> bannerBos);
+    BannerResponseDto convertBannerResponseBoToDto(BannerResponseBo bannerResponseBo);
 
 }

@@ -5,6 +5,7 @@ import com.bookpurple.catalog.bo.LandingRequestBo;
 import com.bookpurple.catalog.bo.ServiceBo;
 import com.bookpurple.catalog.bo.banner.BannerBo;
 import com.bookpurple.catalog.bo.banner.BannerRequestBo;
+import com.bookpurple.catalog.bo.banner.BannerResponseBo;
 import com.bookpurple.catalog.component.ILandingPageProvider;
 import com.bookpurple.catalog.constant.Constants;
 import com.bookpurple.catalog.dto.*;
@@ -154,8 +155,12 @@ public class CatalogControllerV1 {
 
     @GetMapping(value = Constants.UriConstants.GET_ALL_BANNERS,
             produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<BannerResponseDto>> getAllBanners(){
-        List<BannerResponseDto> bannerResponseDtos = catalogMapper.convertBannerBoListToBannerResponseDtoList(bannerService.findAllBanners());
-        return new ResponseEntity(bannerResponseDtos, HttpStatus.OK);
+    public ResponseEntity<BannerResponseDto> getAllBanners(){
+        List<BannerBo> bannerBos = bannerService.findAllBanners();
+        BannerResponseBo bannerResponseBo = BannerResponseBo.builder()
+                .banners(bannerBos)
+                .build();
+        BannerResponseDto bannerResponseDto = catalogMapper.convertBannerResponseBoToDto(bannerResponseBo);
+        return new ResponseEntity<>(bannerResponseDto, HttpStatus.OK);
     }
 }
