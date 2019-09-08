@@ -24,5 +24,9 @@ public class Constants {
         public static final String GET_ALL_SERVICES = "/service/all";
         public static final String ADD_DUMMY_SERVICES= "/dummy/service/add";
         public static final String ADD_SERVICE = "/service/add";
+
+        /*Banner related URL*/
+        public static final String GET_ALL_BANNERS = "/banner/all";
+        public static final String ADD_BANNER = "/banner/add";
     }
 }

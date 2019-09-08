@@ -1,6 +1,7 @@
 package com.bookpurple.catalog.service.impl;
 
 import com.bookpurple.catalog.bo.banner.BannerBo;
+import com.bookpurple.catalog.bo.banner.BannerRequestBo;
 import com.bookpurple.catalog.mapper.CatalogMapper;
 import com.bookpurple.catalog.repo.master.BannerMasterRepo;
 import com.bookpurple.catalog.repo.slave.BannerSlaveRepo;
@@ -28,10 +29,10 @@ public class BannerServiceImpl implements IBannerService {
     }
 
     @Override
-    public BannerBo createBanner(BannerBo bannerBo) {
+    public BannerBo createBanner(BannerRequestBo bannerRequestBo) {
         return catalogMapper
                 .convertBannerEntityToBo(masterRepo
                         .save(catalogMapper
-                                .convertBannerBoToEntity(bannerBo)));
+                                .convertBannerBoToEntity(bannerRequestBo)));
     }
 }
