@@ -3,13 +3,14 @@ package com.bookpurple.catalog.controller;
 import com.bookpurple.catalog.bo.EventBo;
 import com.bookpurple.catalog.bo.LandingRequestBo;
 import com.bookpurple.catalog.bo.ServiceBo;
+import com.bookpurple.catalog.bo.banner.BannerBo;
+import com.bookpurple.catalog.bo.banner.BannerRequestBo;
+import com.bookpurple.catalog.bo.banner.BannerResponseBo;
 import com.bookpurple.catalog.component.ILandingPageProvider;
 import com.bookpurple.catalog.constant.Constants;
-import com.bookpurple.catalog.dto.EventDto;
-import com.bookpurple.catalog.dto.LandingPageResponseDto;
-import com.bookpurple.catalog.dto.LandingRequestDto;
-import com.bookpurple.catalog.dto.ServiceDto;
+import com.bookpurple.catalog.dto.*;
 import com.bookpurple.catalog.mapper.CatalogMapper;
+import com.bookpurple.catalog.service.IBannerService;
 import com.bookpurple.catalog.service.IEventService;
 import com.bookpurple.catalog.service.IServicesService;
 import com.bookpurple.catalog.util.DummyCatalogProvider;
@@ -43,6 +44,9 @@ public class CatalogControllerV1 {
 
     @Autowired
     private CatalogMapper catalogMapper;
+
+    @Autowired
+    private IBannerService bannerService;
 
     @GetMapping(value = "/health", produces = {APPLICATION_JSON_VALUE})
     public ResponseEntity<String> healthCheck() {
@@ -138,5 +142,25 @@ public class CatalogControllerV1 {
     public ResponseEntity<String> addDummyServices() {
         servicesService.addDummyServices(dummyCatalogProvider.getDummyServiceProvider());
         return new ResponseEntity<>("success", HttpStatus.OK);
+    }
+
+    @PostMapping(value = Constants.UriConstants.ADD_BANNER,
+            consumes = APPLICATION_JSON_VALUE,
+            produces = APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> addBanner(@RequestBody BannerRequestDto bannerRequestDto){
+        BannerRequestBo bannerRequestBo = catalogMapper.convertBannerRequestDtoToBo(bannerRequestDto);
+        bannerService.createBanner(bannerRequestBo);
+        return new ResponseEntity<>("success",HttpStatus.OK);
+    }
+
+    @GetMapping(value = Constants.UriConstants.GET_ALL_BANNERS,
+            produces = APPLICATION_JSON_VALUE)
+    public ResponseEntity<BannerResponseDto> getAllBanners(){
+        List<BannerBo> bannerBos = bannerService.findAllBanners();
+        BannerResponseBo bannerResponseBo = BannerResponseBo.builder()
+                .banners(bannerBos)
+                .build();
+        BannerResponseDto bannerResponseDto = catalogMapper.convertBannerResponseBoToDto(bannerResponseBo);
+        return new ResponseEntity<>(bannerResponseDto, HttpStatus.OK);
     }
 }

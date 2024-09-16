@@ -33,7 +33,12 @@ public class LandingPageProvider implements ILandingPageProvider {
         // TODO: user landing request bo for location specific service
         LandingPageResponseDto landingPageResponseDto = landingPageResponseMap.get(KEY);
         if (null == landingPageResponseDto) {
+
+            // Get Grid
             LandingGridDto landingGridDto = getLandingGrid();
+            // Get Banners
+
+
             LandingPageResponseBo landingPageResponseBo = LandingPageResponseBo.builder()
                     .landingGridDto(landingGridDto)
                     .build();
